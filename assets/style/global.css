@@ -1,0 +1,72 @@
+/* Iosevka Regular */
+@font-face {
+  font-family: 'Iosevka';
+  src: url('../assets/fonts/Iosevka-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Iosevka Bold */
+@font-face {
+  font-family: 'Iosevka';
+  src: url('../assets/fonts/Iosevka-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Charon Mono Italic */
+@font-face {
+  font-family: 'Charon Mono';
+  src: url('../assets/fonts/CharonMono-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  /* Tło i neutralne */
+  --color-bg: #FAFAFA;          /* jasne tło całej strony */
+  --color-section-bg: #FFFFFF;  /* tło sekcji */
+  --color-bg-dark: #F5F5F5;     /* lekki kontrast dla niektórych sekcji */
+
+  /* Tekst */
+  --color-text-primary: #1C1C1E; /* nagłówki / główny tekst */
+  --color-text-secondary: #666666; /* tekst dodatkowy / opisowy */
+  --color-text-light: #AAAAAA;   /* np. drobne info / copyright */
+
+  /* Akcent / CTA */
+  --color-accent: #007AFF;      /* niebieski Apple-style, przyciski, linki aktywne */
+  --color-accent-hover: #005FCC; /* ciemniejszy przy hover */
+
+  /* Fonts */
+  --font-heading: 'Iosevka', monospace;
+  --font-code: 'Charon Mono', monospace;
+  --font-body: 'Iosevka', monospace;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Iosevka', monospace;
+}
+
+/* Nagłówki */
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+/* Tekst akapitów */
+p, span, li {
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+/* Specjalne bloki / kod */
+pre, code, .cta {
+  font-family: var(--font-code);
+  font-style: italic;
+}
