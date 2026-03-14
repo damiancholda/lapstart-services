@@ -73,6 +73,9 @@
 .navlinks li>a:hover{
     color: var(--color-accent);
 }
+.navlinks li>a.active{
+    color: var(--color-accent);
+}
 .cta-nav{
     width: auto;
     height: auto;

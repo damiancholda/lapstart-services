@@ -40,7 +40,7 @@
 </head>
 <body>
     <nav class="navbar onscroll">
-        <a href="#" class="logo"><img src="/assets/images/mini-logo.png" alt="Logo" width="40px" height="30px"></a>
+        <a href="/" class="logo"><img src="/assets/images/mini-logo.png" alt="Logo" width="40px" height="30px"></a>
 
         <div class="burger">
             <span class="line"></span>
@@ -49,7 +49,7 @@
         </div>
 
         <ul class="navlinks">
-            <li><a href="/uslugi">Usługi</a></li>
+            <li><a href="/uslugi" class="active">Usługi</a></li>
             <li><a href="#">Dlaczego <strong>LAPSTART</strong></a></li>
             <li><a href="#">Kontakt</a></li>
             <li><a href="#">FAQ</a></li>
@@ -64,83 +64,248 @@
     <section id="services" class="services-section">
   <div class="container">
     <h2>Nasze usługi</h2>
-    <p>Profesjonalny serwis elektroniki w Kielcach – laptopy, telefony, konsole i naprawy ogólne.</p>
+    <p>Profesjonalny serwis elektroniki w Kielcach – laptopy, telefony, konsole i elektronika ogólna.</p>
 
-    <!-- Kategorie -->
-    <div class="categories">
-      <div class="category" data-target="laptop">
-        <i class="fas fa-laptop"></i>
-        <span>Laptop</span>
-      </div>
-      <div class="category" data-target="phone">
-        <i class="fas fa-mobile-alt"></i>
-        <span>Telefon</span>
-      </div>
-      <div class="category" data-target="console">
-        <i class="fas fa-gamepad"></i>
-        <span>Konsole</span>
-      </div>
-      <div class="category" data-target="electronics">
-        <i class="fas fa-microchip"></i>
-        <span>Elektronika</span>
-      </div>
+    <!-- Wyszukiwarka -->
+    <div class="search-bar">
+      <input type="text" id="searchService" placeholder="🔍 Wyszukaj naprawę…">
+      <button id="searchBtn"><i class="fas fa-search"></i></button>
     </div>
 
-    <!-- Sekcje szczegółów -->
-    <div class="service-details">
-      <div class="detail" id="laptop">
-        <h3>Laptopy</h3>
-        <ul>
-          <li>Wymiana matrycy ⏱ 1-2 dni</li>
-          <li>Naprawa płyty głównej ⏱ 3-5 dni</li>
-          <li>Czyszczenie i optymalizacja ⏱ 1 dzień</li>
-          <li>Naprawa po zalaniu ⏱ 2-4 dni</li>
-        </ul>
+    <div class="services-content">
+      <!-- Kategorie po lewej -->
+      <div class="categories-column">
+        <div class="category active" data-target="all">
+          <i class="fas fa-th-large"></i> Wszystkie
+        </div>
+        <div class="category" data-target="laptop">
+          <i class="fas fa-laptop"></i> Laptopy
+        </div>
+        <div class="category" data-target="phone">
+          <i class="fas fa-mobile-alt"></i> Telefony
+        </div>
+        <div class="category" data-target="console">
+          <i class="fas fa-gamepad"></i> Konsole
+        </div>
+        <div class="category" data-target="electronics">
+          <i class="fas fa-microchip"></i> Elektronika
+        </div>
       </div>
 
-      <div class="detail" id="phone">
-        <h3>Telefony</h3>
-        <ul>
-          <li>Wymiana wyświetlacza ⏱ 1 dzień</li>
-          <li>Naprawa gniazda ładowania ⏱ 1-2 dni</li>
-          <li>Usuwanie skutków zalania ⏱ 2 dni</li>
-          <li>Wymiana baterii ⏱ 1 dzień</li>
-        </ul>
-      </div>
+      <!-- Lista usług po prawej -->
+      <div class="service-list">
+        <!-- Laptop (min 10 usług) -->
+        <div class="service-item" data-category="laptop">
+          <div class="service-title"><span>Wymiana matrycy</span> <span class="time">⏱ 1-2 dni</span></div>
+          <span class="service-category-label">Laptop</span>
+          <div class="service-details">Szybka wymiana uszkodzonej matrycy, wszystkie modele.</div>
+        </div>
+        <div class="service-item" data-category="laptop">
+          <div class="service-title"><span>Naprawa płyty głównej</span> <span class="time">⏱ 3-5 dni</span></div>
+          <span class="service-category-label">Laptop</span>
+          <div class="service-details">Profesjonalne lutowanie i naprawa elementów SMD.</div>
+        </div>
+        <div class="service-item" data-category="laptop">
+          <div class="service-title"><span>Czyszczenie układów chłodzenia</span> <span class="time">⏱ 1 dzień</span></div>
+          <span class="service-category-label">Laptop</span>
+          <div class="service-details">Usuwanie kurzu, wymiana past termoprzewodzących.</div>
+        </div>
+        <div class="service-item" data-category="laptop">
+          <div class="service-title"><span>Naprawa po zalaniu</span> <span class="time">⏱ 2-4 dni</span></div>
+          <span class="service-category-label">Laptop</span>
+          <div class="service-details">Przywracanie pełnej funkcjonalności po zalaniu.</div>
+        </div>
+        <div class="service-item" data-category="laptop">
+          <div class="service-title"><span>Wymiana dysku SSD/HDD</span> <span class="time">⏱ 1 dzień</span></div>
+          <span class="service-category-label">Laptop</span>
+          <div class="service-details">Migracja danych i instalacja systemu.</div>
+        </div>
+        <div class="service-item" data-category="laptop">
+          <div class="service-title"><span>Aktualizacja BIOS/UEFI</span> <span class="time">⏱ 1-2 dni</span></div>
+          <span class="service-category-label">Laptop</span>
+          <div class="service-details">Naprawa problemów z bootowaniem i stabilnością systemu.</div>
+        </div>
+        <div class="service-item" data-category="laptop">
+          <div class="service-title"><span>Naprawa gniazd USB/HDMI</span> <span class="time">⏱ 1-2 dni</span></div>
+          <span class="service-category-label">Laptop</span>
+          <div class="service-details">Lutowanie i wymiana uszkodzonych portów.</div>
+        </div>
+        <div class="service-item" data-category="laptop">
+          <div class="service-title"><span>Wymiana klawiatury</span> <span class="time">⏱ 1 dzień</span></div>
+          <span class="service-category-label">Laptop</span>
+          <div class="service-details">Pasuje do większości modeli laptopów.</div>
+        </div>
+        <div class="service-item" data-category="laptop">
+          <div class="service-title"><span>Naprawa systemu operacyjnego</span> <span class="time">⏱ 1-2 dni</span></div>
+          <span class="service-category-label">Laptop</span>
+          <div class="service-details">Reinstalacja, naprawa błędów i optymalizacja.</div>
+        </div>
+        <div class="service-item" data-category="laptop">
+          <div class="service-title"><span>Wymiana baterii</span> <span class="time">⏱ 1 dzień</span></div>
+          <span class="service-category-label">Laptop</span>
+          <div class="service-details">Długotrwała wydajność i bezpieczeństwo ogniwa.</div>
+        </div>
 
-      <div class="detail" id="console">
-        <h3>Konsole</h3>
-        <ul>
-          <li>Naprawa padów / driftów ⏱ 1-2 dni</li>
-          <li>Wymiana dysków / elementów ⏱ 2-3 dni</li>
-          <li>Naprawa po zalaniu ⏱ 3 dni</li>
-        </ul>
-      </div>
+        <!-- Telefon (min 10 usług) -->
+        <div class="service-item" data-category="phone">
+          <div class="service-title"><span>Wymiana wyświetlacza</span> <span class="time">⏱ 1 dzień</span></div>
+            <span class="service-category-label">Telefony</span>
+          <div class="service-details">Dotyczy wszystkich modeli smartfonów.</div>
+        </div>
+        <div class="service-item" data-category="phone">
+          <div class="service-title"><span>Naprawa gniazda ładowania</span> <span class="time">⏱ 1-2 dni</span></div>
+            <span class="service-category-label">Telefony</span>
+          <div class="service-details">Precyzyjne lutowanie i wymiana gniazd.</div>
+        </div>
+        <div class="service-item" data-category="phone">
+          <div class="service-title"><span>Naprawa po zalaniu</span> <span class="time">⏱ 2 dni</span></div>
+            <span class="service-category-label">Telefony</span>
+          <div class="service-details">Usuwanie skutków zalania i przywracanie pełnej funkcjonalności.</div>
+        </div>
+        <div class="service-item" data-category="phone">
+          <div class="service-title"><span>Wymiana baterii</span> <span class="time">⏱ 1 dzień</span></div>
+            <span class="service-category-label">Telefony</span>
+          <div class="service-details">Bezpieczne ogniwa i długi czas pracy.</div>
+        </div>
+        <div class="service-item" data-category="phone">
+          <div class="service-title"><span>Wymiana tylnej klapki</span> <span class="time">⏱ 1 dzień</span></div>
+            <span class="service-category-label">Telefony</span>
+          <div class="service-details">Dopasowanie kolorystyczne i pełna kompatybilność.</div>
+        </div>
+        <div class="service-item" data-category="phone">
+          <div class="service-title"><span>Naprawa aparatu</span> <span class="time">⏱ 1-2 dni</span></div>
+            <span class="service-category-label">Telefony</span>
+          <div class="service-details">Precyzyjna wymiana modułów aparatu.</div>
+        </div>
+        <div class="service-item" data-category="phone">
+          <div class="service-title"><span>Naprawa głośnika / mikrofonu</span> <span class="time">⏱ 1-2 dni</span></div>
+            <span class="service-category-label">Telefony</span>
+          <div class="service-details">Dźwięk wysokiej jakości po naprawie.</div>
+        </div>
+        <div class="service-item" data-category="phone">
+          <div class="service-title"><span>Naprawa przycisków bocznych</span> <span class="time">⏱ 1 dzień</span></div>
+            <span class="service-category-label">Telefony</span>
+          <div class="service-details">Przywracanie pełnej funkcjonalności przycisków.</div>
+        </div>
+        <div class="service-item" data-category="phone">
+          <div class="service-title"><span>Aktualizacja oprogramowania</span> <span class="time">⏱ 1 dzień</span></div>
+            <span class="service-category-label">Telefony</span>
+          <div class="service-details">Naprawa błędów systemowych, optymalizacja pracy.</div>
+        </div>
+        <div class="service-item" data-category="phone">
+          <div class="service-title"><span>Odblokowanie SIM / telefonu</span> <span class="time">⏱ 1-2 dni</span></div>
+            <span class="service-category-label">Telefony</span>
+          <div class="service-details">Profesjonalna obsługa blokad operatorów.</div>
+        </div>
 
-      <div class="detail" id="electronics">
-        <h3>Elektronika</h3>
-        <ul>
-          <li>Lutowanie / naprawy SMD ⏱ 1-4 dni</li>
-          <li>Naprawa urządzeń po zalaniu ⏱ 2-5 dni</li>
-          <li>Wymiana podzespołów ⏱ wg diagnozy</li>
-        </ul>
+        <!-- Konsole (10 usług) -->
+        <div class="service-item" data-category="console">
+          <div class="service-title"><span>Naprawa padów / driftów</span> <span class="time">⏱ 1-2 dni</span></div>
+          <span class="service-category-label">Konsole</span>
+          <div class="service-details">Precyzyjna naprawa analogów.</div>
+        </div>
+        <div class="service-item" data-category="console">
+          <div class="service-title"><span>Wymiana joysticków</span> <span class="time">⏱ 1-2 dni</span></div>
+         <span class="service-category-label">Konsole</span>
+          <div class="service-details">Pełna kompatybilność i precyzja ruchu.</div>
+        </div>
+        <div class="service-item" data-category="console">
+          <div class="service-title"><span>Naprawa przycisków</span> <span class="time">⏱ 1-2 dni</span></div>
+          <span class="service-category-label">Konsole</span>
+          <div class="service-details">Wymiana zużytych przycisków w kontrolerach.</div>
+        </div>
+        <div class="service-item" data-category="console">
+          <div class="service-title"><span>Wymiana dysków / pamięci</span> <span class="time">⏱ 2-3 dni</span></div>
+          <span class="service-category-label">Konsole</span>
+          <div class="service-details">Rozszerzenie pamięci konsoli i naprawa dysków SSD/HDD.</div>
+        </div>
+        <div class="service-item" data-category="console">
+          <div class="service-title"><span>Naprawa po zalaniu</span> <span class="time">⏱ 3 dni</span></div>
+          <span class="service-category-label">Konsole</span>
+          <div class="service-details">Przywracanie funkcjonalności urządzeń po zalaniu.</div>
+        </div>
+        <div class="service-item" data-category="console">
+          <div class="service-title"><span>Naprawa portów HDMI/USB</span> <span class="time">⏱ 2 dni</span></div>
+          <span class="service-category-label">Konsole</span>
+          <div class="service-details">Lutowanie i wymiana uszkodzonych portów.</div>
+        </div>
+        <div class="service-item" data-category="console">
+          <div class="service-title"><span>Aktualizacja oprogramowania</span> <span class="time">⏱ 1 dzień</span></div>
+          <span class="service-category-label">Konsole</span>
+          <div class="service-details">Naprawa błędów systemowych konsoli.</div>
+        </div>
+        <div class="service-item" data-category="console">
+          <div class="service-title"><span>Wymiana obudowy kontrolera</span> <span class="time">⏱ 1 dzień</span></div>
+          <span class="service-category-label">Konsole</span>
+          <div class="service-details">Estetyczna i funkcjonalna wymiana obudowy.</div>
+        </div>
+        <div class="service-item" data-category="console">
+          <div class="service-title"><span>Naprawa napędu dysków</span> <span class="time">⏱ 2-3 dni</span></div>
+          <span class="service-category-label">Konsole</span>
+          <div class="service-details">Precyzyjna naprawa mechanizmów napędów konsolowych.</div>
+        </div>
+        <div class="service-item" data-category="console">
+          <div class="service-title"><span>Diagnoza i testy</span> <span class="time">⏱ 1 dzień</span></div>
+         <span class="service-category-label">Konsole</span>
+          <div class="service-details">Pełne sprawdzenie wszystkich funkcji konsoli.</div>
+        </div>
+
+        <!-- Elektronika (10 usług) -->
+        <div class="service-item" data-category="electronics">
+          <div class="service-title"><span>Lutowanie elementów SMD</span> <span class="time">⏱ 1-4 dni</span></div>
+          <span class="service-category-label">Elektornikia</span>
+          <div class="service-details">Precyzyjne lutowanie płytek i elementów SMD.</div>
+        </div>
+        <div class="service-item" data-category="electronics">
+          <div class="service-title"><span>Naprawa po zalaniu</span> <span class="time">⏱ 2-5 dni</span></div>
+          <span class="service-category-label">Elektornikia</span>
+          <div class="service-details">Przywracanie funkcjonalności urządzeń elektronicznych.</div>
+        </div>
+        <div class="service-item" data-category="electronics">
+          <div class="service-title"><span>Wymiana układów scalonych</span> <span class="time">⏱ 3-5 dni</span></div>
+          <span class="service-category-label">Elektornikia</span>
+          <div class="service-details">Profesjonalna wymiana uszkodzonych chipów i elementów.</div>
+        </div>
+        <div class="service-item" data-category="electronics">
+          <div class="service-title"><span>Naprawa gniazd i portów</span> <span class="time">⏱ 1-2 dni</span></div>
+          <span class="service-category-label">Elektornikia</span>
+          <div class="service-details">Lutowanie i wymiana uszkodzonych portów.</div>
+        </div>
+        <div class="service-item" data-category="electronics">
+          <div class="service-title"><span>Wymiana bezpieczników</span> <span class="time">⏱ 1 dzień</span></div>
+          <span class="service-category-label">Elektornikia</span>
+          <div class="service-details">Szybka wymiana i testowanie układu.</div>
+        </div>
+        <div class="service-item" data-category="electronics">
+          <div class="service-title"><span>Naprawa sterowników</span> <span class="time">⏱ 2 dni</span></div>
+          <span class="service-category-label">Elektornikia</span>
+          <div class="service-details">Diagnoza i naprawa problemów sterowników.</div>
+        </div>
+        <div class="service-item" data-category="electronics">
+          <div class="service-title"><span>Testy i diagnostyka układów</span> <span class="time">⏱ 1-2 dni</span></div>
+          <span class="service-category-label">Elektornikia</span>
+          <div class="service-details">Pełna analiza działania urządzeń.</div>
+        </div>
+        <div class="service-item" data-category="electronics">
+          <div class="service-title"><span>Wymiana kondensatorów</span> <span class="time">⏱ 2 dni</span></div>
+          <span class="service-category-label">Elektornikia</span>
+          <div class="service-details">Poprawa stabilności i wydajności układów.</div>
+        </div>
+        <div class="service-item" data-category="electronics">
+          <div class="service-title"><span>Naprawa paneli sterowania</span> <span class="time">⏱ 3 dni</span></div>
+          <span class="service-category-label">Elektornikia</span>
+          <div class="service-details">Profesjonalna naprawa płytek sterujących.</div>
+        </div>
+        <div class="service-item" data-category="electronics">
+          <div class="service-title"><span>Wymiana przewodów i złączy</span> <span class="time">⏱ 1-2 dni</span></div>
+          <span class="service-category-label">Elektornikia</span>
+          <div class="service-details">Poprawa połączeń i integralności sygnałów.</div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<script>const categories = document.querySelectorAll('.category');
-const details = document.querySelectorAll('.service-details .detail');
-
-categories.forEach(cat => {
-  cat.addEventListener('click', () => {
-    // usuń aktywne klasy
-    details.forEach(d => d.classList.remove('active'));
-    // pokaż odpowiednią sekcję
-    const target = document.getElementById(cat.dataset.target);
-    target.classList.add('active');
-  });
-});
-</script>
+<script src="/uslugi/assets/script/services.js"></script>
 </body>
 </html>
